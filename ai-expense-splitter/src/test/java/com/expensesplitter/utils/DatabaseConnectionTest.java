@@ -52,4 +52,24 @@ public class DatabaseConnectionTest {
             fail("closeConnection() should not throw any exception when instance is null.");
         }
     }
+
+    /**
+     * Verifies that the database connection can be established successfully.
+     * Requires MySQL service to be running in XAMPP and database 'expense_splitter' to exist.
+     */
+    @Test
+    public void testDatabaseConnection() {
+        try {
+            // Attempt to get the connection instance
+            Connection conn = DatabaseConnection.getInstance();
+            assertNotNull("Connection should not be null", conn);
+            assertFalse("Connection should be open", conn.isClosed());
+            System.out.println("TEST SUCCESS: Successfully connected to database: " + conn.getMetaData().getURL());
+        } catch (SQLException e) {
+            fail("Database connection failed. Ensure MySQL is running in XAMPP and credentials/database name are correct. Error: " + e.getMessage());
+        } finally {
+            // Close connection after testing to release resources
+            DatabaseConnection.closeConnection();
+        }
+    }
 }

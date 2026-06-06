@@ -156,6 +156,12 @@ public class LoginView extends StackPane {
             } else {
                 errorLabel.setText("Invalid email or password.");
             }
+
+            System.out.println("Entered Password: " + password);
+            System.out.println("Stored Hash: " + user.getPasswordHash());
+            System.out.println(
+                    PasswordHasher.verifyPassword(password, user.getPasswordHash())
+            );
             
         } catch (SQLException e) {
             errorLabel.setText("Database error: " + e.getMessage());

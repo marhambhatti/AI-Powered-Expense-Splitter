@@ -32,7 +32,7 @@ public class DatabaseConnection {
      * Database password configuration.
      * Replace with your local MySQL password.
      */
-    private static final String DB_PASS = "your_password";
+    private static final String DB_PASS = "";
 
     /**
      * The single shared Connection instance.

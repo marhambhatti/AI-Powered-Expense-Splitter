@@ -1,0 +1,44 @@
+% ──────────────────────────────────────────────────────────────────────
+% Weka Training Data — Expense Category Prediction (Naive Bayes)
+% Used by: MLCategoryPredictor.java
+% Student: Muhammad Arham | L1F23BSSE0372
+%
+% Add more training examples to improve prediction accuracy.
+% Format: keyword,category
+% ──────────────────────────────────────────────────────────────────────
+
+@RELATION expense_categories
+
+@ATTRIBUTE keyword STRING
+@ATTRIBUTE category {Food,Travel,Utilities,Entertainment,Shopping,Other}
+
+@DATA
+pizza,Food
+dinner,Food
+lunch,Food
+breakfast,Food
+groceries,Food
+restaurant,Food
+uber,Travel
+taxi,Travel
+petrol,Travel
+flight,Travel
+bus,Travel
+train,Travel
+electricity,Utilities
+internet,Utilities
+water,Utilities
+gas,Utilities
+rent,Utilities
+netflix,Entertainment
+cinema,Entertainment
+movie,Entertainment
+spotify,Entertainment
+concert,Entertainment
+clothes,Shopping
+shoes,Shopping
+amazon,Shopping
+mall,Shopping
+medicine,Other
+doctor,Other
+gym,Other
